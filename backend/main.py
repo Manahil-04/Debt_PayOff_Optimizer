@@ -27,6 +27,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173", # Frontend URL
         "http://localhost:3000",
+        "https://debt-payoff-optimizer.onrender.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
