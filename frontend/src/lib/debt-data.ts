@@ -1,9 +1,9 @@
 import { toast } from "sonner";
 import { getAuthToken } from "./auth";
 
-const API_BASE = import.meta.env.VITE_API_URL;
-const API_URL = `${API_BASE}/api/v1/debts`;
-const GOALS_API_URL = `${API_BASE}/api/v1/goals`;
+const API_BASE = import.meta.env.VITE_API_URL || "";
+const API_URL = `${API_BASE.replace(/\/$/, "")}/api/v1/debts`;
+const GOALS_API_URL = `${API_BASE.replace(/\/$/, "")}/api/v1/goals`;
 
 export interface Debt {
   id: string;

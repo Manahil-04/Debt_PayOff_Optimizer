@@ -13,8 +13,8 @@ export interface FrontendUser extends Omit<User, '_id'> {
 }
 
 const TOKEN_KEY = "pathlight_access_token";
-const API_BASE = import.meta.env.VITE_API_URL;
-const API_URL = `${API_BASE}/api/v1/auth`;
+const API_BASE = import.meta.env.VITE_API_URL || "";
+const API_URL = `${API_BASE.replace(/\/$/, "")}/api/v1/auth`;
 
 export function getAuthToken(): string | null {
   return localStorage.getItem(TOKEN_KEY);
