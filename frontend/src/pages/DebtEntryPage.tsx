@@ -104,7 +104,7 @@ const DebtEntryPage = () => {
     const debtData = {
       ...values,
       annualPercentageRate: values.annualPercentageRate / 100, // Convert percentage to decimal for storage
-    };
+    } as Omit<Debt, 'id' | 'userId' | 'createdAt' | 'updatedAt'>;
 
     if (editingDebt) {
       const success = await updateDebt(currentUser.id, { ...editingDebt, ...debtData });

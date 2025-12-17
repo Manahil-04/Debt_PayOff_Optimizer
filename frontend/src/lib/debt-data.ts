@@ -1,7 +1,7 @@
 import { toast } from "sonner";
 import { getAuthToken } from "./auth";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_URL;
 const API_URL = `${API_BASE}/api/v1/debts`;
 const GOALS_API_URL = `${API_BASE}/api/v1/goals`;
 
